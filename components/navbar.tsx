@@ -43,11 +43,10 @@ export function Navbar() {
 
   return (
     <header
-      className={`fixed top-0 inset-x-0 z-50 transition-all duration-300 ${
-        scrolled
+      className={`fixed top-0 inset-x-0 z-50 transition-all duration-300 ${scrolled
           ? "bg-background/95 backdrop-blur border-b border-border shadow-sm"
           : "bg-transparent"
-      }`}
+        }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
         {/* Logo */}
@@ -76,6 +75,8 @@ export function Navbar() {
             </a>
           ))}
         </nav>
+
+        <script data-name="BMC-Widget" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="ismailmouyahada" data-description="Support me on Buy me a coffee!" data-message="" data-color="#5F7FFF" data-position="Right" data-x_margin="18" data-y_margin="18"></script>
 
         {/* Right actions */}
         <div className="flex items-center gap-2">
