@@ -1,5 +1,4 @@
 import {
-  Code2,
   Globe2,
   Cpu,
   Zap,
@@ -7,11 +6,12 @@ import {
   GitBranch,
   ArrowLeftRight,
   Users,
+  FileCode,
 } from "lucide-react"
 
 const features = [
   {
-    icon: Code2,
+    icon: FileCode,
     title: "Open Source",
     desc: "Licensed under LGPL/GPL. Full source code available. No vendor lock-in.",
   },

@@ -1,8 +1,8 @@
-import { Code2, Cpu, Globe2, Layers } from "lucide-react"
+import { Cpu, FileCode, Globe2, Layers } from "lucide-react"
 
 const pillars = [
   {
-    icon: Code2,
+    icon: FileCode,
     title: "Open-Source IDE / RAD",
     desc: "Lazarus is a free, open-source Rapid Application Development environment distributed under the LGPL and GPL licences. Anyone can use, study, modify, and redistribute it.",
   },

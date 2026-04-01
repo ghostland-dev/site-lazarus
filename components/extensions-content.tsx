@@ -3,7 +3,6 @@
 import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import {
-  Code2,
   Puzzle,
   Terminal,
   FileCode,
@@ -18,7 +17,7 @@ import {
 } from "lucide-react"
 
 const editorTabs = [
-  { id: "vscode", label: "VS Code", icon: Code2 },
+  { id: "vscode", label: "VS Code", icon: FileCode },
   { id: "sublime", label: "Sublime Text", icon: FileCode },
   { id: "vim", label: "Vim / Neovim", icon: Terminal },
   { id: "other", label: "Other Editors", icon: Puzzle },
@@ -204,7 +203,7 @@ const tools = [
     name: "pas2js",
     category: "Transpiler",
     description: "Pascal to JavaScript transpiler for building web applications with Pascal.",
-    icon: Code2,
+    icon: FileCode,
   },
   {
     name: "fpcmake",
@@ -252,11 +251,10 @@ export function ExtensionsContent() {
               <button
                 key={id}
                 onClick={() => setActiveTab(id)}
-                className={`flex items-center gap-2 px-5 py-2.5 rounded-lg text-sm font-medium transition-all ${
-                  activeTab === id
-                    ? "bg-card text-foreground shadow-sm"
-                    : "text-muted-foreground hover:text-foreground"
-                }`}
+                className={`flex items-center gap-2 px-5 py-2.5 rounded-lg text-sm font-medium transition-all ${activeTab === id
+                  ? "bg-card text-foreground shadow-sm"
+                  : "text-muted-foreground hover:text-foreground"
+                  }`}
               >
                 <Icon className="w-4 h-4" />
                 {label}
@@ -272,9 +270,8 @@ export function ExtensionsContent() {
                 href={ext.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`group relative block bg-card border rounded-xl p-6 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 ${
-                  ext.featured ? "border-primary/30" : "border-border hover:border-primary/30"
-                }`}
+                className={`group relative block bg-card border rounded-xl p-6 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 ${ext.featured ? "border-primary/30" : "border-border hover:border-primary/30"
+                  }`}
               >
                 {ext.featured && (
                   <span className="absolute -top-3 left-4 px-3 py-1 bg-primary text-primary-foreground text-xs font-semibold rounded-full">
