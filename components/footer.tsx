@@ -2,25 +2,24 @@ import Image from "next/image"
 
 const columns = [
   {
-    heading: "Overview",
+    heading: "Product",
     links: [
-      { label: "Introduction", href: "#introduction" },
-      { label: "Core Strengths", href: "#features" },
-      { label: "Free Pascal", href: "#freepascal" },
-      { label: "LCL", href: "#lcl" },
-      { label: "Widgetsets", href: "#widgetsets" },
-      { label: "Cross-Platform", href: "#platforms" },
+      { label: "Features", href: "/#features" },
+      { label: "Downloads", href: "/#downloads" },
+      { label: "Libraries", href: "/libraries" },
+      { label: "Extensions", href: "/extensions" },
+      { label: "Release Notes", href: "https://gitlab.com/freepascal.org/lazarus/-/releases" },
     ],
   },
   {
-    heading: "Documentation",
+    heading: "Resources",
     links: [
       { label: "Getting Started", href: "https://wiki.lazarus.freepascal.org/Getting_Lazarus" },
       { label: "Tutorials", href: "https://wiki.lazarus.freepascal.org/Tutorials" },
       { label: "LCL Reference", href: "https://wiki.lazarus.freepascal.org/LCL" },
       { label: "Cross-Compilation", href: "https://wiki.lazarus.freepascal.org/Cross_compiling" },
-      { label: "Migration from Delphi", href: "https://wiki.lazarus.freepascal.org/Lazarus_for_Delphi_users" },
-      { label: "FAQ", href: "#faq" },
+      { label: "Delphi Migration", href: "https://wiki.lazarus.freepascal.org/Lazarus_for_Delphi_users" },
+      { label: "FAQ", href: "/#faq" },
     ],
   },
   {
@@ -30,7 +29,7 @@ const columns = [
       { label: "Linux", href: "https://gitlab.com/freepascal.org/lazarus/-/releases" },
       { label: "macOS", href: "https://gitlab.com/freepascal.org/lazarus/-/releases" },
       { label: "Source Code", href: "https://gitlab.com/freepascal.org/lazarus" },
-      { label: "Release notes", href: "https://gitlab.com/freepascal.org/lazarus/-/releases" },
+      { label: "Package Manager", href: "https://packages.lazarus-ide.org/" },
     ],
   },
   {
@@ -38,10 +37,9 @@ const columns = [
     links: [
       { label: "GitLab Repository", href: "https://gitlab.com/freepascal.org/lazarus" },
       { label: "Forum", href: "https://forum.lazarus.freepascal.org/" },
-      { label: "Mailing lists", href: "https://lists.lazarus-ide.org/" },
-      { label: "Bug tracker", href: "https://gitlab.com/freepascal.org/lazarus/-/issues" },
-      { label: "Package manager", href: "https://packages.lazarus-ide.org/" },
-      { label: "Contribute", href: "#contribute" },
+      { label: "Mailing Lists", href: "https://lists.lazarus-ide.org/" },
+      { label: "Bug Tracker", href: "https://gitlab.com/freepascal.org/lazarus/-/issues" },
+      { label: "Contribute", href: "/#contribute" },
     ],
   },
 ]

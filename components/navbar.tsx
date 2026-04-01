@@ -7,13 +7,12 @@ import Image from "next/image"
 import { Button } from "@/components/ui/button"
 
 const navLinks = [
-  { label: "Features", href: "#features" },
-  { label: "LCL", href: "#lcl" },
-  { label: "Platforms", href: "#platforms" },
-  { label: "History", href: "#history" },
-  { label: "Downloads", href: "#downloads" },
-  { label: "Docs", href: "#documentation" },
-  { label: "FAQ", href: "#faq" },
+  { label: "Features", href: "/#features" },
+  { label: "Libraries", href: "/libraries" },
+  { label: "Extensions", href: "/extensions" },
+  { label: "Downloads", href: "/#downloads" },
+  { label: "Docs", href: "/#documentation" },
+  { label: "FAQ", href: "/#faq" },
 ]
 
 export function Navbar() {
