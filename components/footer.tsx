@@ -38,7 +38,7 @@ const columns = [
       { label: "Forum", href: "https://forum.lazarus.freepascal.org/" },
       { label: "Bug Tracker", href: "https://gitlab.com/freepascal.org/lazarus/-/issues" },
       { label: "Donate", href: "/#donate" },
-      { label: "Support on Tipeee", href: "https://fr.tipeee.com/music2music" },
+      { label: "Support on Tipeee", href: "https://fr.tipeee.com/open-source-contribution/" },
     ],
   },
 ]
