@@ -1,4 +1,4 @@
-import { Code2 } from "lucide-react"
+import Image from "next/image"
 
 const columns = [
   {
@@ -57,9 +57,13 @@ export function Footer() {
           {/* Brand */}
           <div className="col-span-2 md:col-span-4 lg:col-span-1">
             <div className="flex items-center gap-2 mb-4">
-              <div className="w-8 h-8 rounded-md bg-primary flex items-center justify-center">
-                <Code2 className="w-4 h-4 text-primary-foreground" />
-              </div>
+              <Image
+                src="/lazarus-logo.png"
+                alt="Lazarus IDE Logo"
+                width={32}
+                height={32}
+                className="w-8 h-8"
+              />
               <span className="font-bold text-foreground">Lazarus IDE</span>
             </div>
             <p className="text-sm text-muted-foreground leading-relaxed mb-4">

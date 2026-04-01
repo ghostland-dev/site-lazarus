@@ -2,7 +2,8 @@
 
 import { useState, useEffect } from "react"
 import Link from "next/link"
-import { Menu, X, Code2 } from "lucide-react"
+import { Menu, X } from "lucide-react"
+import Image from "next/image"
 import { Button } from "@/components/ui/button"
 
 const navLinks = [
@@ -52,9 +53,14 @@ export function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2 font-bold text-lg text-foreground">
-          <div className="w-8 h-8 rounded-md bg-primary flex items-center justify-center">
-            <Code2 className="w-4 h-4 text-primary-foreground" />
-          </div>
+          <Image
+            src="/lazarus-logo.png"
+            alt="Lazarus IDE Logo"
+            width={32}
+            height={32}
+            className="w-8 h-8"
+            priority
+          />
           <span className="font-sans">Lazarus</span>
           <span className="text-muted-foreground font-normal text-sm hidden sm:inline">IDE</span>
         </Link>
