@@ -8,13 +8,12 @@ const columns = [
       { label: "Downloads", href: "/#downloads" },
       { label: "Libraries", href: "/libraries" },
       { label: "Extensions", href: "/extensions" },
-      { label: "Release Notes", href: "https://gitlab.com/freepascal.org/lazarus/-/releases" },
+      { label: "Getting Started", href: "/getting-started" },
     ],
   },
   {
     heading: "Resources",
     links: [
-      { label: "Getting Started", href: "https://wiki.lazarus.freepascal.org/Getting_Lazarus" },
       { label: "Tutorials", href: "https://wiki.lazarus.freepascal.org/Tutorials" },
       { label: "LCL Reference", href: "https://wiki.lazarus.freepascal.org/LCL" },
       { label: "Cross-Compilation", href: "https://wiki.lazarus.freepascal.org/Cross_compiling" },
@@ -25,11 +24,11 @@ const columns = [
   {
     heading: "Downloads",
     links: [
-      { label: "Windows", href: "https://gitlab.com/freepascal.org/lazarus/-/releases" },
-      { label: "Linux", href: "https://gitlab.com/freepascal.org/lazarus/-/releases" },
-      { label: "macOS", href: "https://gitlab.com/freepascal.org/lazarus/-/releases" },
+      { label: "Windows", href: "https://sourceforge.net/projects/lazarus/files/Lazarus%20Windows%2064%20bits/" },
+      { label: "Linux", href: "https://sourceforge.net/projects/lazarus/files/Lazarus%20Linux%20amd64%20DEB/" },
+      { label: "macOS", href: "https://sourceforge.net/projects/lazarus/files/Lazarus%20macOS%20x86-64/" },
       { label: "Source Code", href: "https://gitlab.com/freepascal.org/lazarus" },
-      { label: "Package Manager", href: "https://packages.lazarus-ide.org/" },
+      { label: "All Downloads", href: "https://sourceforge.net/projects/lazarus/files/" },
     ],
   },
   {
@@ -37,9 +36,9 @@ const columns = [
     links: [
       { label: "GitLab Repository", href: "https://gitlab.com/freepascal.org/lazarus" },
       { label: "Forum", href: "https://forum.lazarus.freepascal.org/" },
-      { label: "Mailing Lists", href: "https://lists.lazarus-ide.org/" },
       { label: "Bug Tracker", href: "https://gitlab.com/freepascal.org/lazarus/-/issues" },
-      { label: "Contribute", href: "/#contribute" },
+      { label: "Donate", href: "/#donate" },
+      { label: "Support on Tipeee", href: "https://fr.tipeee.com/music2music" },
     ],
   },
 ]

@@ -1,5 +1,6 @@
-import { Download, ExternalLink, GitBranch, Package } from "lucide-react"
+import { Download, ExternalLink, GitBranch, Package, BookOpen } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import Link from "next/link"
 
 const platforms = [
   {
@@ -13,7 +14,8 @@ const platforms = [
         <path d="M16 17.5H29v12.5L16 28.2V17.5z" fill="currentColor" opacity=".5"/>
       </svg>
     ),
-    href: "https://gitlab.com/freepascal.org/lazarus/-/releases",
+    href: "https://sourceforge.net/projects/lazarus/files/Lazarus%20Windows%2064%20bits/Lazarus%204.0/",
+    directDownload: "https://sourceforge.net/projects/lazarus/files/Lazarus%20Windows%2064%20bits/Lazarus%204.0/lazarus-4.0-fpc-3.2.2-win64.exe/download",
   },
   {
     name: "Linux",
@@ -27,7 +29,8 @@ const platforms = [
         <path d="M13 14.5s1.2 2 3 2 3-2 3-2" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round"/>
       </svg>
     ),
-    href: "https://gitlab.com/freepascal.org/lazarus/-/releases",
+    href: "https://sourceforge.net/projects/lazarus/files/Lazarus%20Linux%20amd64%20DEB/Lazarus%204.0/",
+    directDownload: "https://sourceforge.net/projects/lazarus/files/Lazarus%20Linux%20amd64%20DEB/Lazarus%204.0/",
   },
   {
     name: "macOS",
@@ -38,7 +41,8 @@ const platforms = [
         <path d="M26 22c-1.1 2.4-1.6 3.5-3 4.8-1.9 1.8-4.5.3-7 .3s-5.1 1.5-7-.3C7.5 25.4 7 24.4 5.9 22c-2.8-6.2-.3-15.5 5.1-15.5 2.1 0 3.5 1.4 5 1.4s2.9-1.4 5-1.4c5.3 0 7.8 9.4 5 15.5z" fill="currentColor" opacity=".8"/>
       </svg>
     ),
-    href: "https://gitlab.com/freepascal.org/lazarus/-/releases",
+    href: "https://sourceforge.net/projects/lazarus/files/Lazarus%20macOS%20x86-64/Lazarus%204.0/",
+    directDownload: "https://sourceforge.net/projects/lazarus/files/Lazarus%20macOS%20x86-64/Lazarus%204.0/",
   },
   {
     name: "Source Code",
@@ -50,25 +54,35 @@ const platforms = [
         <line x1="19" y1="7" x2="13" y2="25" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
       </svg>
     ),
-    href: "https://gitlab.com/freepascal.org/lazarus",
+    href: "https://gitlab.com/freepascal.org/lazarus/-/tree/main",
+    directDownload: "https://gitlab.com/freepascal.org/lazarus/-/archive/main/lazarus-main.zip",
   },
 ]
 
 const links = [
   {
+    icon: BookOpen,
+    label: "Getting Started Guide",
+    href: "/getting-started",
+    internal: true,
+  },
+  {
     icon: GitBranch,
     label: "View Git repository",
     href: "https://gitlab.com/freepascal.org/lazarus",
-  },
-  {
-    icon: ExternalLink,
-    label: "Installation guide",
-    href: "https://wiki.lazarus.freepascal.org/Getting_Lazarus",
+    internal: false,
   },
   {
     icon: Package,
     label: "Package manager (OPM)",
     href: "https://wiki.lazarus.freepascal.org/Online_Package_Manager",
+    internal: false,
+  },
+  {
+    icon: ExternalLink,
+    label: "All downloads on SourceForge",
+    href: "https://sourceforge.net/projects/lazarus/files/",
+    internal: false,
   },
 ]
 
@@ -84,7 +98,7 @@ export function DownloadsSection() {
             id="downloads-heading"
             className="text-3xl sm:text-4xl font-bold text-foreground text-balance mb-4"
           >
-            Download Lazarus 4.6.0
+            Download Lazarus 4.0
           </h2>
           <p className="text-muted-foreground leading-relaxed">
             Free to download, free to use, free to distribute. Choose your platform below.
@@ -95,12 +109,12 @@ export function DownloadsSection() {
           {platforms.map((p) => (
             <a
               key={p.name}
-              href={p.href}
+              href={p.directDownload}
               target="_blank"
               rel="noopener noreferrer"
               className="group bg-card border border-border rounded-xl p-6 flex flex-col gap-4 hover:border-primary/50 hover:shadow-md transition-all"
             >
-              <div className="w-12 h-12 rounded-xl bg-brand-blue-muted flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
+              <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
                 {p.icon}
               </div>
               <div>
@@ -117,17 +131,28 @@ export function DownloadsSection() {
 
         {/* Utility links */}
         <div className="flex flex-wrap gap-3 justify-center">
-          {links.map(({ icon: Icon, label, href }) => (
-            <a
-              key={label}
-              href={href}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-border bg-card text-sm text-foreground hover:border-primary/50 hover:text-primary transition-colors"
-            >
-              <Icon className="w-4 h-4" />
-              {label}
-            </a>
+          {links.map(({ icon: Icon, label, href, internal }) => (
+            internal ? (
+              <Link
+                key={label}
+                href={href}
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-border bg-card text-sm text-foreground hover:border-primary/50 hover:text-primary transition-colors"
+              >
+                <Icon className="w-4 h-4" />
+                {label}
+              </Link>
+            ) : (
+              <a
+                key={label}
+                href={href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-border bg-card text-sm text-foreground hover:border-primary/50 hover:text-primary transition-colors"
+              >
+                <Icon className="w-4 h-4" />
+                {label}
+              </a>
+            )
           ))}
         </div>
       </div>

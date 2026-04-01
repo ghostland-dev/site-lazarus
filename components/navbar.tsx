@@ -8,11 +8,11 @@ import { Button } from "@/components/ui/button"
 
 const navLinks = [
   { label: "Features", href: "/#features" },
+  { label: "Getting Started", href: "/getting-started" },
   { label: "Libraries", href: "/libraries" },
   { label: "Extensions", href: "/extensions" },
   { label: "Downloads", href: "/#downloads" },
-  { label: "Docs", href: "/#documentation" },
-  { label: "FAQ", href: "/#faq" },
+  { label: "Donate", href: "/#donate" },
 ]
 
 export function Navbar() {

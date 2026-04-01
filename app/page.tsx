@@ -12,6 +12,7 @@ import { DownloadsSection } from "@/components/downloads-section"
 import { DocumentationSection } from "@/components/documentation-section"
 import { FaqSection } from "@/components/faq-section"
 import { ContributionSection } from "@/components/contribution-section"
+import { DonationSection } from "@/components/donation-section"
 import { Footer } from "@/components/footer"
 
 export default function Home() {
@@ -32,6 +33,7 @@ export default function Home() {
         <DocumentationSection />
         <FaqSection />
         <ContributionSection />
+        <DonationSection />
       </main>
       <Footer />
     </>
